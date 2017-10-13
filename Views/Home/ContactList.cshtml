@@ -6,7 +6,7 @@
   if (Model.GetAll().Count>0)
   {
     foreach (var person in Model.GetAll())
-    {<li>@person.GetName()</li>}
+    {<li><a href='/contact/@person.GetId()'>@person.GetName()</a></li>}
   }
   else
   {

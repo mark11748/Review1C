@@ -19,6 +19,12 @@ namespace Review1C.Controllers
       Contact myContacts = new Contact();
       return View(myContacts);
     }
+    [HttpGet("/contact/{id}")]
+    public ActionResult ContactDetails(int ID)
+    {
+      Contact myContacts = new Contact();
+      return View(myContacts.GetAll()[ID-1]);
+    }
     [HttpGet("/contact/add")]
     public ActionResult Contact()
     {
