@@ -11,7 +11,6 @@ namespace Review1C.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      Contact myContacts = new Contact();
       return View();
     }
     [HttpGet("/contact/list")]
@@ -34,6 +33,13 @@ namespace Review1C.Controllers
       yourContact.SetAddress(Request.Form["contact-address"]);
       yourContact.AddContact();
       return View(yourContact);
+    }
+    [HttpPost("/contact/clear")]
+    public ActionResult ClearContacts()
+    {
+      Contact myContacts = new Contact();
+      if(myContacts.GetAll().Count>0){myContacts.ClearContacts();}
+      return View();
     }
   }
 }
