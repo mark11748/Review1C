@@ -6,7 +6,7 @@ namespace Review1C.Models
   public class Contact
   {
     private static List<Contact> _contacts=new List<Contact> {};
-    private int    _id=-1;
+    private int    _id;
     private string _name;
     private string _phone;
     private string _address;
@@ -29,6 +29,14 @@ namespace Review1C.Models
       _name   = "";
       _phone  = "";
       _address= "";
+      _id=-1;
+    }
+    public Contact (string name, string numb, string address)
+    {
+      _name   = name;
+      _phone  = numb;
+      _address= address;
+      _id=-1;
     }
   }
 }

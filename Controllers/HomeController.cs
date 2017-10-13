@@ -14,7 +14,7 @@ namespace Review1C.Controllers
       Contact myContacts = new Contact();
       return View(myContacts);
     }
-    
+
     [HttpGet("/contact/{id}")]
     public ActionResult ContactDetails(int ID)
     {
@@ -29,10 +29,9 @@ namespace Review1C.Controllers
     [HttpPost("/contact/new")]
     public ActionResult NewContact()
     {
-      Contact yourContact = new Contact();
-      yourContact.SetName(Request.Form["contact-name"]);
-      yourContact.SetPhone(Request.Form["contact-phone"]);
-      yourContact.SetAddress(Request.Form["contact-address"]);
+      Contact yourContact = new Contact(Request.Form["contact-name"],
+                                        Request.Form["contact-phone"],
+                                        Request.Form["contact-address"]);
       yourContact.AddContact();
       return View(yourContact);
     }
