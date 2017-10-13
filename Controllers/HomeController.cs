@@ -11,14 +11,10 @@ namespace Review1C.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      return View();
-    }
-    [HttpGet("/contact/list")]
-    public ActionResult ContactList()
-    {
       Contact myContacts = new Contact();
       return View(myContacts);
     }
+    
     [HttpGet("/contact/{id}")]
     public ActionResult ContactDetails(int ID)
     {
