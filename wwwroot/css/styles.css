@@ -1,12 +1,9 @@
-div {
-    position:fixed;
-    bottom:0px;
-    left:0px;
-    width:100%;
-    color:#CCC;
-    background:#333;
-    padding:8px;
-
-    border: 8px;
-    border-color: blue;
+div#footer
+{
+  padding: 10px;
+  margin: 5px;
+  color:#CCC;
+  background: #e0faff;
+  border-width: 8px;
+  border-color: blue;
 }

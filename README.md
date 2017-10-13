@@ -16,7 +16,7 @@ _Homepage offers either a list of contact names or a mesg saying there are non y
 
 ## Known Bugs
 
-_At this time the site should be stable to run_
+_CSS is not linking properly so i gave it an unassigned id to act on for the time being. This will hopefully be patched over the weekend_
 
 ## Support and contact details
 
