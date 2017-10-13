@@ -1,17 +1,6 @@
-@{Layout="_Layout"}
-<h3>C# Review#1</h3>
-<h6>Contacts App</h6>
-<br><br>
-<p>Your contacts:</p>
-@{
-  if (Model.GetAll().Count()>0)
-  {
-    foreach (Contact person in Model.GetAll())
-    {<li>@person</li>}
-  }
-  else
-  {
-    <p>ALERT:Your contacts list is empty!</p>
-  }
-}
-<a href="/contact">click here to submit a new contact!</a>
+@{Layout="_Layout";}
+@Html.Partial("Header")
+<h5>Please select an option below:</h5>
+<br>
+<a href="/contact/add">click here to submit a new contact!</a><br>
+<a href="/contact/list"> click here to see a list of contacts!</a>

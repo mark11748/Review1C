@@ -10,7 +10,8 @@ namespace Review1C.Models
     private string _phone;
     private string _address;
 
-    public static List<Contact> GetAll() {return _contacts;}
+    public List<Contact> GetAll() {return _contacts;}
+    public void AddContact(){ _contacts.Add(this);}
 
     public string GetName ()  {return _name;}
     public string GetPhone()  {return _phone;}
